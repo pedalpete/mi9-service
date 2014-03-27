@@ -1,0 +1,17 @@
+{
+	"name":"mi9-service",
+	"author":"pedalpete",
+	"version":"0.0.1",
+	"devDependencies":{
+		"jasmine-node":"latest"
+	},
+	"scripts": {
+    "test": "jasmine-node tests"
+    },
+    "dependencies":{
+    },
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/pedalpete/mi9-service.git"
+    }"
+}
