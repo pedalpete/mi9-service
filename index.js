@@ -12,9 +12,18 @@ http.createServer(function (req, res) {
          });
 
         req.on('end',function(){
-         res.end(JSON.stringify(parse_json(body)));
+          var response = parse_json(body);
+          var response_type = response.error ? 400 : 200;
+          response = JSON.stringify(response);  
+         res.writeHead(response_type, {
+          'Content-Length': response.length,
+         'Content-Type': 'application/json' }); 
+         res.end(response);
         });      
       } else {
+         res.writeHead(400, {
+          'Content-Length': response.length,
+         'Content-Type': 'application/json' }); 
         res.end('{"error":""this endpoint only accepts POST requests"}')
       }
       break;
