@@ -1,0 +1,13 @@
+# Mi9 - JSON Parsing
+
+This is a sample app showing simple JSON parsing using Node.js.
+
+
+## Setup
+Setup is simple, just run `npm install` from within the app directory. 
+
+## Tests
+Tests are in the testing folder, and can be run from the app directory by running `npm test`
+
+## App
+To run the app, from the app directory, run `node index` which will run the app on localhost:8080
