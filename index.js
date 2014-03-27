@@ -1,6 +1,6 @@
 var http = require('http');
 var parse_json = require('./parse_json.js');
-
+var port =  Number(process.env.PORT || 8080);
 http.createServer(function (req, res) {
   /* only checking for a POST type for the response right now */
   switch(req.url) {
@@ -23,4 +23,4 @@ http.createServer(function (req, res) {
       res.end('<html><head><title>404 - Not found</title></head><body><h1>Not found.</h1></body></html>');
       console.log("[404] " + req.method + " to " + req.url);
   };
-}).listen(8080); 
+}).listen(port); 
